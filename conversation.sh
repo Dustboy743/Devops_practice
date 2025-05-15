@@ -1,6 +1,7 @@
 #!/bin/bash
-
-echo "Trumph:: Hi Musk, ssup?"
-echo "Musk:: Hey bud! Nothing..you?"
-echo "Trumph:: good..hows the spacex?"
-echo "Musk:: it's good"
+value1 = Trumph
+value2 = Musk
+echo "value1:: Hi value2, ssup?"
+echo "value2:: Hey bud! Nothing..you?"
+echo "value1:: good..hows the spacex?"
+echo "Muvalue2sk:: it's good"

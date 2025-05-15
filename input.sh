@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Enter your pin:: "
+echo "Enter your pin::"
 
 read -s PIN
 

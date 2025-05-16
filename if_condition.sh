@@ -1,6 +1,6 @@
 #!/bin/bash
 
-number=$1
+number=5
 
 if [ $number > 10 ]
 then

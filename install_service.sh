@@ -8,3 +8,4 @@ then
 else
     echo "You're not the root user. Switch to root user"
     exit 1
+fi

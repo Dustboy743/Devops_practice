@@ -12,7 +12,7 @@ fi
 
 apt list --installed | grep mysql-server   #to check whether already installed or not
 
-if [ $? -ne 0 ]    #if installed
+if [ $? -ne 0 ]    #if not installed
 then
     echo "not installed..will start installing it"
     apt install mysql-server -y

@@ -1,5 +1,9 @@
 #!/bin/bash
 
-user_id=$(id -u)
+user_id=$(id -u)  #to get the user id of the user
 
-echo "user id is $user_id"
+if [$user_id -eq 0 ]
+    echo "You're the root user.."
+else
+    echo "You're not the root user. Switch to root user"
+    exit 1

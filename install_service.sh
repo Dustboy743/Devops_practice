@@ -10,12 +10,12 @@ else
     exit 1
 fi
 
-apt list --installed | grep nginx   #to check whether already installed or not
+apt list --installed | grep mysql-server   #to check whether already installed or not
 
 if [ $? -ne 0 ]    #if installed
 then
     echo "not installed..will start installing it"
-    apt install nginx -y
+    apt install mysql-server -y
     if [ $? -eq 0 ]    #status after installing
     then
         echo "great..installed it..SUCCESS"

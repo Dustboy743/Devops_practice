@@ -9,6 +9,7 @@ normal="\e[0m"
 folder="/var/log/shell_scriptlogs"   #create a folder
 scriptname=$(echo $0 | cut -d "." -f1)  #to extract the name
 filename="$folder/$scriptname.log"
+packages=("nginx" "mysql-server")
 
 mkdir -p $folder  $make a directory
 
@@ -34,21 +35,15 @@ else
     exit 1
 fi   
 
-dpkg -l | grep nginx &>> $filename
+for package in ${packages[@]}
+do
+   dpkg -l | grep $package &>> $filename
+    if [ $? -ne 0 ]
+    then    
+        install_apps $package &>> $filename   
+    else
+        echo -e "$yellow $package is already installed $normal"  | tee -a $filename       
+    fi
+done
 
-if [ $? -ne 0 ]
-then    
-    install_apps nginx &>> $filename   
-else
-    echo -e "$yellow nginx is already installed $normal"  | tee -a $filename       
-fi
-
-dpkg -l | grep mysql-server &>> $filename
-
-if [ $? -ne 0 ]
-then    
-    install_apps mysql-server &>> $filename
-else
-    echo -e "$yellow mysql-server is already installed $normal" | tee -a $filename       
-fi
 

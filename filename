@@ -1,0 +1,5 @@
+ii  nginx                                         1.24.0-2ubuntu7.3                        amd64        small, powerful, scalable web/proxy server
+ii  nginx-common                                  1.24.0-2ubuntu7.3                        all          small, powerful, scalable web/proxy server - common files
+ii  mysql-server                                  8.0.42-0ubuntu0.24.04.1                  all          MySQL database server (metapackage depending on the latest version)
+ii  mysql-server-8.0                              8.0.42-0ubuntu0.24.04.1                  amd64        MySQL database server binaries and system database setup
+ii  mysql-server-core-8.0                         8.0.42-0ubuntu0.24.04.1                  amd64        MySQL database server binaries

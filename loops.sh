@@ -9,7 +9,7 @@ normal="\e[0m"
 folder="/var/log/shell_scriptlogs"   #create a folder
 scriptname=$(echo $0 | cut -d "." -f1)  #to extract the name
 filename="$folder/$scriptname.log"
-packages=("nginx" "awscli")
+packages=("nginx" "mysql-server")
 
 mkdir -p $folder  $make a directory
 

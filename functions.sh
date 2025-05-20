@@ -43,12 +43,12 @@ else
     echo -e "$yellow nginx is already installed $normal"  | tee -a $filename       
 fi
 
-dpkg -l | grep mysql-server &>> $filename
+dpkg -l | grep awscli &>> $filename
 
 if [ $? -ne 0 ]
 then    
-    install_apps mysql-server &>> $filename
+    install_apps awscli &>> $filename
 else
-    echo -e "$yellow mysql-server is already installed $normal" | tee -a $filename       
+    echo -e "$yellow awscli is already installed $normal" | tee -a $filename       
 fi
 
